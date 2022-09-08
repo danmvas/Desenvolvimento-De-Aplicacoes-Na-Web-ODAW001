@@ -1,0 +1,76 @@
+body {
+  background-color: #f4c2c2;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(168, 17, 55);
+  margin-left: 20px;
+  font-family:'Courier New', Courier, monospace;
+}
+
+header {
+	color: red;
+}
+
+figcaption{
+	font-size: 8pt;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+figure img {
+  width: 300px;
+}
+
+section{
+  padding: 10px;
+}
+
+section b {
+  padding: 10px;
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  color: rgb(235, 57, 86);
+}
+
+a:active{
+  color: #b1052a;
+}
+
+h3 a {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+table, th, td {
+  text-align: center;
+  border: 1px solid;
+  align-self: center;
+}
+
+.button {
+  background-color: rgb(235, 57, 86);
+  padding: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.button:active{
+  background-color: #b1052a;
+}
+
+.input-texto{
+  width:200px;
+}
+
+.center-table {
+  display: flex;
+  justify-content: center;
+}
+
+.center-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
