@@ -1,0 +1,3 @@
+admin|admin
+daniella@daniella.com|$2y$12$7Uaf/qA0dz9aq2/jCRPOis3kOm7MVAd5ES9v1d84VqnOOWe23UJCy
+teste@teste.com|$2y$10$v7qHXtzOlLPYyyrFo9Ej0.AGlTpAqF0zzCx9ZZM3vi5RcLzcVFfgi
