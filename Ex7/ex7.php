@@ -126,36 +126,25 @@ function test_input($data) {
         <br><br>
     
 
-    Texto: <textarea name="texto" rows="8" cols="50"><?php echo $texto;?></textarea>
+    Fale um pouco sobre você: <textarea name="texto" rows="8" cols="50"><?php echo $texto;?></textarea>
         <span class="error">* <?php echo $textoErr;?></span>
         <br><br>
 
     Cidade: <select name="cidade" id="cidade" value="<?php echo $cidade;?>">
         <option value=""> </option>
-        <option value="joinville">Joinville</option>
-        <option value="blumenau">Blumenau</option>
-        <option value="florianopolis">Florianópolis</option>
-        <option value="curitiba">Curitiba</option>
+        <option value="Joinville">Joinville</option>
+        <option value="Blumenau">Blumenau</option>
+        <option value="Florianópolis">Florianópolis</option>
+        <option value="Curitiba">Curitiba</option>
+        <option value="Outra">Outra</option>
         </select>
         <span class="error">* <?php echo $cidadeErr;?></span>
         <br><br>
 
-    Veículo: <br>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bicicleta">
-        <label for="vehicle1"> Eu tenho uma bicicleta</label><br>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Carro">
-        <label for="vehicle2"> Eu tenho um carro</label><br>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Outro">
-        <label for="vehicle3"> Outro</label><br>
-        <input type="checkbox" id="vehicle4" name="vehicle4" value="Nenhum">
-        <label for="vehicle4"> Nenhum</label><br>     
-        <span class="error">* <?php echo $vehicleErr;?></span><br>    
-        <br><br>
-
     Gênero:
-        <input type="radio" name="genero" <?php if (isset($genero) && $genero=="homem") echo "checked";?> value="homem">Homem
-        <input type="radio" name="genero" <?php if (isset($genero) && $genero=="mulher") echo "checked";?> value="mulher">Mulher
-        <input type="radio" name="genero" <?php if (isset($genero) && $genero=="outro") echo "checked";?> value="outro">Outro  
+        <input type="radio" name="genero" <?php if (isset($genero) && $genero=="homem") ?> value="Homem">Homem
+        <input type="radio" name="genero" <?php if (isset($genero) && $genero=="mulher") ?> value="Mulher">Mulher
+        <input type="radio" name="genero" <?php if (isset($genero) && $genero=="outro") ?> value="Outro">Outro  
         <span class="error">* <?php echo $generoErr;?></span>
         <br><br>
   
@@ -167,19 +156,17 @@ function test_input($data) {
 
 <?php
 echo "<h2>Entrada:</h2>";
-echo "nome: " . $name;
+echo "Nome: " . $name;
 echo "<br>";
-echo "email: " . $email;
+echo "Email: " . $email;
 echo "<br>";
-echo "senha: " . $senha;
+echo "Senha: " . $senha;
 echo "<br>";
-echo "texto: " . $texto;
+echo "Sobre o usuário: " . $texto;
 echo "<br>";
-echo "cidade: " . $cidade;
+echo "Cidade: " . $cidade;
 echo "<br>";
-echo "veiculo: " . $vehicle;
-echo "<br>";
-echo "genero: " . $genero;
+echo "Gênero: " . $genero;
 echo "<br>";
 ?>
 </body>

@@ -1,3 +1,16 @@
 admin|admin
 daniella@daniella.com|$2y$12$7Uaf/qA0dz9aq2/jCRPOis3kOm7MVAd5ES9v1d84VqnOOWe23UJCy
 teste@teste.com|$2y$10$v7qHXtzOlLPYyyrFo9Ej0.AGlTpAqF0zzCx9ZZM3vi5RcLzcVFfgi
+danivasco@msn.com|$2y$10$GHioRK9ZiSM9nd2nKEcyEeOvbV6rF16Vu4wHjBTT.3.Z0wMagZ3Gi
+danivasco@msn.com|$2y$10$iEJB64QC2wOzMF8kccFO6.HZmqdOdCX6pzemgElWxg0Ytbmm/FHYC
+danivasco@msn.com|$2y$10$v98JPzdv43zVd7u9Q95oo.dyxRMuu1nRQqGnZ0ENwh75qPyf90a72
+danivasco@msn.com|$2y$10$iFHB7UmBSbJUJxjGDQDlHeF/jjE8tzfLhi1tpbZXV1oselNgDYU72
+danivasco@msn.com|$2y$10$wo4Er19uKaGznWQHMasbNOdCZ/9g9VCzaz/w8USwHGBNGQkzW1dpi
+danivasco@msn.com|$2y$10$twRVz7XMgFVJ.TPLHB/7COoMhKdLtsi6HuqYjwu6pwVaQalaYS7xG
+danivasco@msn.com|$2y$10$J.zbX1wnU3mduE1APFqmgel2aRq9JM/zxbJC5B/2KDBbIGv4EU4/u
+danivasco@msn.com|$2y$10$Jf7CgFNlDpaPIlDsoGb4Sustsga5rDcjpBscdFOsh11XpSrchpwru
+danivasco@msn.com|$2y$10$WJVOPlXV3zy8gFgiyqH9suBcG5X6RcFPDC/r7Dy3Fr82i./kcroPi
+danivasco@msn.com|$2y$10$4Ds0J.Bhf5x0M6zVi/i8JucOHLc2Eq5BaSgb4HC1SYIOn.5u.g/4W
+danivasco@msn.com|$2y$10$NHDjx10ra9olFdKjtRhfmOLR1MeA.dRF3ziFec6lQRUiNQNQGibe.
+daniellavasconc@gmail.com|$2y$10$VqCiDBC1OJtkpojh1qLYw.Og3yofgd4pLUtUylnEan6hB6PfCWwEm
+daniellavasconc@gmail.com|$2y$10$DLB3.cq3JeXYn0V/wXCp/udOyNkHrsaohGjE1XjdDhxNGWjY.lodu
