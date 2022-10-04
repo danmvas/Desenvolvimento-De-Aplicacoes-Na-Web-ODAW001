@@ -1,76 +1,241 @@
-body {
-  background-color: #f4c2c2;
-  text-align: center;
-}
+/********************* menos espec[ificos!!!!!! *********************/
 
-h1 {
-  color: rgb(168, 17, 55);
-  margin-left: 20px;
-  font-family:'Courier New', Courier, monospace;
+body {
+  background-color: #f7f7f7;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 header {
-	color: red;
+  background-color: rgb(168, 17, 55);
+  color: rgb(226, 226, 226);
+  padding: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  border-bottom: 1px solid darkgray;
 }
 
-figcaption{
-	font-size: 8pt;
-  font-family: 'Times New Roman', Times, serif;
+input,
+label {
+  display: block;
+  padding-bottom: 5px;
 }
 
-figure img {
+input::placeholder {
+  color: lightgray;
+}
+
+footer {
+  padding: 10px;
+  padding-bottom: 15px;
+  background-color: #fafafa;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  border-top: 1px solid darkgray;
+}
+
+h1 {
+  margin-top: 10px;
+  color: #f7f7f7;
+}
+
+h3 {
+  font-weight: lighter;
+  font-size: 18px !important;
+}
+
+/********************* classes!!!!!! *********************/
+
+.box {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.one {
+  flex: 1;
+  width: 50%;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.date {
+  color: #565961;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #fefbf7;
+  color: #551329;
+  border: 1px solid #551329;
+  text-align: left;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 23.5%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #551329 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.round {
+  cursor: pointer;
+  border-radius: 4px;
+  border: solid 1px rgb(107, 107, 107);
+  height: 22px;
+}
+
+.wid100 {
+  width: 100%;
+}
+
+.wid97 {
   width: 300px;
 }
 
-section{
-  padding: 10px;
-}
-
-section b {
-  padding: 10px;
-  font-size: large;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-a {
-  color: rgb(235, 57, 86);
-}
-
-a:active{
-  color: #b1052a;
-}
-
-h3 a {
-  font-family: 'Courier New', Courier, monospace;
-}
-
-table, th, td {
+.select-estiloso {
+  width: 100%;
+  height: 35px;
+  border: rgb(107, 107, 107) 1px solid;
   text-align: center;
-  border: 1px solid;
-  align-self: center;
+  font-size: 14px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: gray;
+  text-align-last: center;
 }
 
-.button {
-  background-color: rgb(235, 57, 86);
+.select-estiloso select {
+  background: transparent; /* importante para exibir o novo ícone */
+  width: 100%;
   padding: 5px;
-  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
 }
 
-.button:active{
-  background-color: #b1052a;
+.select-estiloso:focus {
+  outline: none;
+  border-color: #551329;
+  box-shadow: 0 0 2px;
 }
 
-.input-texto{
-  width:200px;
+.form-field {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+  border: rgb(107, 107, 107) 1px solid;
+  box-sizing: border-box;
 }
 
-.center-table {
-  display: flex;
-  justify-content: center;
+.form-field::placeholder {
+  color: gray;
 }
 
-.center-list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.form-field:focus {
+  outline: none;
+  border-color: #551329;
+  box-shadow: 0 0 2px;
+}
+
+.firstrow {
+  width: 100%;
+}
+
+.campoErrado {
+  border-color: red;
+}
+
+/********************* ids!!!!!! *********************/
+
+#infoCircle {
+  font-size: 13px;
+  color: #921941;
+  transition: 0.3s;
+  float: left;
+}
+
+#infoCircle:hover {
+  color: #3a0416;
+  transition: 0.5s;
+}
+
+#imgwarn {
+  background-color: #fefbf7;
+  border: 1px solid #921941;
+  color: #921941;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 11px;
+  margin-left: -40px;
+  width: 181px;
+}
+
+#birthd {
+  padding: 0 0 5px 10px;
+}
+
+#principal {
+  width: 800px;
+  color: #59595e;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  border-radius: 5px;
+  box-shadow: 0 0 1em black;
+  background-color: white;
+}
+
+#centralBody {
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+#savechang {
+  color: white;
+  background-color: #d75745;
+  width: 25%;
+  height: 40px;
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#savechang:hover {
+  background-color: #922416;
 }
