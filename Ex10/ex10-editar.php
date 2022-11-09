@@ -8,13 +8,14 @@
 
 <html>
 <head>
-    <title>ODAW - Exercício 10 - PHP</title>
+    <title>ODAW - Exercício 09 - PHP</title>
 </head>
 
 <body>
 <?php
-$name='';$novoname='';
+$nome='';$novonome='';
 $email='';$novoemail='';
+$idade='';$novaidade='';
 $nomepreenchido = true;
 $emailpreenchido = true;
 //=================================================
@@ -60,6 +61,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    if (empty($_POST["novaidade"])) {
+        $novaidadeErr = "Esse campo é necessário.";
+        $idadepreenchida = false;                // pra não cadastrar no banco de dados se o formulario nao tiver completo
+    } else {
+        $novaidade = test_input($_POST["novaidade"]);
+        if (!preg_match("/^[0-9]*$/",$novaidade)) {
+        $novaidadeErr = "Só é permitido números.";
+        $idadepreenchida = false;                // pra não cadastrar no banco de dados se o formulario nao tiver completo
+        }
+    }
+
     if($nomepreenchido == false){
         echo "Nome não preenchido, portanto não será alterado. <br>";
     } else {     
@@ -85,6 +97,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else
             echo "Email: erro";
     }
+
+    if($idadepreenchida == false){
+        echo "Idade não preenchida, portanto não será alterada.";
+    } else {
+        $consulta = "UPDATE pessoa SET idade='$_POST[novaidade]' WHERE idade='$_POST[idade]'";
+        $resultado = mysqli_query ($conexao, $consulta);
+        mysqli_error($conexao);
+        if ($resultado)
+            echo "Idade '$_POST[idade]' alterado para '$_POST[novaidade]'";
+        else
+            echo "Idade: erro";
+    }
 }
 function test_input($data) {
     $data = trim($data);
@@ -106,12 +130,16 @@ function test_input($data) {
     Novo email: <input type="text" name="novoemail" value="<?php echo $novoemail;?>">
 
   <br><br>
+  Idade a ser editada: <input type="text" name="idade" value="<?php echo $email;?>">
+    Nova idade: <input type="text" name="novaidade" value="<?php echo $novoemail;?>">
+
+  <br><br>
   <input type="submit" name="submit">  
   <input type="reset" name="reset">
 </form>
 
-<p><a href="http://localhost/odaw/ex10-inserir.php">Inserir</a></p>
-<p><a href="http://localhost/odaw/ex10-mostrar.php">Mostrar</a></p>
-<p><a href="http://localhost/odaw/ex10-editar.php">Editar</a></p>
-<p><a href="http://localhost/odaw/ex10-excluir.php">Excluir</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-inserir.php">Inserir</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-mostrar.php">Mostrar</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-editar.php">Editar</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-excluir.php">Excluir</a></p>
 </html>
