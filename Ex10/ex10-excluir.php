@@ -8,7 +8,7 @@
 
 <html>
 <head>
-    <title>ODAW - Exercício 10 - PHP</title>
+    <title>ODAW - Exercício 09 - PHP</title>
 </head>
 
 <body>
@@ -86,8 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <input type="reset" name="reset">
 </form>
 
-<p><a href="http://localhost/odaw/ex10-inserir.php">Inserir</a></p>
-<p><a href="http://localhost/odaw/ex10-mostrar.php">Mostrar</a></p>
-<p><a href="http://localhost/odaw/ex10-editar.php">Editar</a></p>
-<p><a href="http://localhost/odaw/ex10-excluir.php">Excluir</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-inserir.php">Inserir</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-mostrar.php">Mostrar</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-editar.php">Editar</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-excluir.php">Excluir</a></p>
 </html>

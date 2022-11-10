@@ -9,7 +9,7 @@
 
 <html>
 <head>
-    <title>ODAW - Exercício 10 - PHP</title>
+    <title>ODAW - Exercício 09 - PHP</title>
 </head>
 
 <body>
@@ -36,12 +36,12 @@ if ($conexao -> connect_errno) {
 //$conexao = mysqli_connect('localhost', 'root', '');
 //mysqli_select_db($conexao, "udesc");
 
-$consulta = "SELECT codigo, nome, email FROM pessoa";
+$consulta = "SELECT codigo, nome, idade, email FROM pessoa";
 $resultado = mysqli_query ($conexao,$consulta);
-echo "--------- <b>CÓDIGO</B> ----------------------------- <b>NOME</B> --------------------------------------------------- <b>EMAIL</B> ----------------------------- <br>";
+echo "--------- <b>CÓDIGO</B> ----------------------------- <b>NOME</B> --------------------------- <b>IDADE</B> -------------------------------------------- <b>EMAIL</B> ----------------------------- <br>";
 while ($linha = mysqli_fetch_row($resultado))
 {
- echo "-------------- ". $linha[0]." ----------------------------- ".$linha[1]." ----------------------------- ".$linha[2]." -------------- <br>";
+ echo "-------------- ". $linha[0]." ---------------------------------- ".$linha[1]." ---------------------".$linha[2]." -------------------------------- ".$linha[3]." -------------- <br>";
 }
 echo "<br><br>";
 
@@ -49,8 +49,8 @@ echo "<br><br>";
 
 ?>
 
-<p><a href="http://localhost/odaw/ex10-inserir.php">Inserir</a></p>
-<p><a href="http://localhost/odaw/ex10-mostrar.php">Mostrar</a></p>
-<p><a href="http://localhost/odaw/ex10-editar.php">Editar</a></p>
-<p><a href="http://localhost/odaw/ex10-excluir.php">Excluir</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-inserir.php">Inserir</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-mostrar.php">Mostrar</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-editar.php">Editar</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-excluir.php">Excluir</a></p>
 </html>

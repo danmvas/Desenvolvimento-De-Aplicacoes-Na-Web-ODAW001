@@ -14,3 +14,5 @@ danivasco@msn.com|$2y$10$4Ds0J.Bhf5x0M6zVi/i8JucOHLc2Eq5BaSgb4HC1SYIOn.5u.g/4W
 danivasco@msn.com|$2y$10$NHDjx10ra9olFdKjtRhfmOLR1MeA.dRF3ziFec6lQRUiNQNQGibe.
 daniellavasconc@gmail.com|$2y$10$VqCiDBC1OJtkpojh1qLYw.Og3yofgd4pLUtUylnEan6hB6PfCWwEm
 daniellavasconc@gmail.com|$2y$10$DLB3.cq3JeXYn0V/wXCp/udOyNkHrsaohGjE1XjdDhxNGWjY.lodu
+admin|$2y$10$wnDhHVj0SR.9Izk6/Ljps.zQiMJMuqs4rdnGMjSBAcTUb8X/JswMm
+admin|$2y$10$4jH4XsjLnauHlmFn/ZQW9esmBETxV6rqGFbBk0OI22iqKDGMTxGtG

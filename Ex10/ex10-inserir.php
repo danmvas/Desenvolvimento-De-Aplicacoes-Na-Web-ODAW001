@@ -9,7 +9,7 @@
 
 <html>
 <head>
-    <title>ODAW - Exercício 10 - PHP</title>
+    <title>ODAW - Exercício 09 - PHP</title>
 </head>
 
 <body>
@@ -33,9 +33,9 @@ if ($conexao -> connect_errno) {
     exit();
   }
   echo "<br>";
-//$conexao = mysqli_connect('localhost', 'root', '');
-//mysqli_select_db($conexao, "udesc");
-// $consulta = "CREATE TABLE pessoa (codigo INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(50), email VARCHAR(50))";
+// $conexao = mysqli_connect('localhost', 'root', '');
+// mysqli_select_db($conexao, "udesc");
+// $consulta = "CREATE TABLE pessoa (codigo INT AUTO_INCREMENT PRIMARY KEY, nome VARCHAR(50), idade VARCHAR(3), email VARCHAR(50))";
 // $resultado = mysqli_query ($conexao, $consulta);
 // if ($resultado)
 //  echo "Tabela criada com sucesso";
@@ -46,11 +46,8 @@ if ($conexao -> connect_errno) {
 // define variables and set to empty values
 $name = ""; $nameErr = "";
 $email = ""; $emailErr = "";
-$senha = ""; $senhaErr = "";
-$texto = ""; $textoErr = "";
-$cidade = ""; $cidadeErr = "";
-$vehicle = ""; $vehicleErr = "";
-$genero = ""; $generoErr = "";
+$idade = "";$idadeErr = "";
+$senha = "";
 $preenchido = true;
 
 
@@ -78,41 +75,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $preenchido = false;                // pra não cadastrar no banco de dados se o formulario nao tiver completo
         }
     }
-    $uppercase = preg_match('@[A-Z]@', $senha);
-    $lowercase = preg_match('@[a-z]@', $senha);
-    $number    = preg_match('@[0-9]@', $senha);
-    $specialChars = preg_match('@[^\w]@', $senha);
 
-    if (empty($_POST["senha"])) {
-        $senhaErr = "Esse campo é necessário.";
+    if (empty($_POST["idade"])) {
+        $idadeErr = "Esse campo é necessário.";
+        $preenchido = false;                // pra não cadastrar no banco de dados se o formulario nao tiver completo
     } else {
-        $senha = test_input($_POST["senha"]);
-
-        if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
-            $senhaErr = "A senha precisa ter 8 caracteres, um maiusculo, um minusculo, um numero e um caracter especial.";
+        $idade = test_input($_POST["idade"]);
+        // check if e-mail address is well-formed
+        if (!preg_match("/^[0-9 ]*$/",$idade)) {
+          $idadeErr = "Só digite números.";
+          $preenchido = false;                // pra não cadastrar no banco de dados se o formulario nao tiver completo
         }
-    }
-
-    if (empty($_POST["texto"])){
-    $textoErr = "Esse campo é necessário.";
-    } else {
-        $texto = test_input($_POST["texto"]);
-    }
-
-    if (empty($_POST["cidade"])){
-        $cidadeErr = "Esse campo é necessário.";
-    } else {
-            $cidade = test_input($_POST["cidade"]);
-    }    
-
-    if(!isset($_POST["vehicle1"]) && !isset($_POST["vehicle2"]) && !isset($_POST["vehicle3"]) && !isset($_POST["vehicle4"])){
-        $vehicleErr = "Esse campo é necessário."; 
-    }
-    
-    if (empty($_POST["genero"])) {
-        $generoErr = "Esse campo é necessário.";
-      } else {
-        $genero = test_input($_POST["genero"]);
     }
 
     if($preenchido == false){
@@ -124,11 +97,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //echo $resultado;
         //echo $conexao -> info;
 
-        $consulta = "INSERT INTO pessoa (nome, email) values ('$_POST[name]','$_POST[email]')";
+        $consulta = "INSERT INTO pessoa (nome, email, idade) values ('$_POST[name]','$_POST[email]', '$_POST[idade]')";
         $resultado = mysqli_query ($conexao, $consulta);
         mysqli_error($conexao);
-        if ($resultado)
-            echo "Sucesso";
+        if ($resultado){
+            //echo "Sucesso";
+        }
         else
             echo "Erro";
 
@@ -139,6 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
         fwrite($arquivo, $pulaLinha);
         fwrite($arquivo, $email);
+        fwrite($arquivo, $senha);
         fwrite($arquivo, $separador);
         fwrite($arquivo, $senhaHash);
         fclose($arquivo);
@@ -164,6 +139,10 @@ function test_input($data) {
         <span class="error">* <?php echo $emailErr;?></span>
         <br><br>
 
+    Idade: <input type="text" name="idade" value="<?php echo $idade;?>">
+        <span class="error">* <?php echo $idadeErr;?></span>
+        <br><br>
+
   <br><br>
   <input type="submit" name="submit">  
   <input type="reset" name="reset">
@@ -175,13 +154,15 @@ echo "nome: " . $name;
 echo "<br>";
 echo "email: " . $email;
 echo "<br>";
+echo "idade: " . $idade;
+echo "<br>";
 
 
 ?>
 </body>
 
-<p><a href="http://localhost/odaw/ex10-inserir.php">Inserir</a></p>
-<p><a href="http://localhost/odaw/ex10-mostrar.php">Mostrar</a></p>
-<p><a href="http://localhost/odaw/ex10-editar.php">Editar</a></p>
-<p><a href="http://localhost/odaw/ex10-excluir.php">Excluir</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-inserir.php">Inserir</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-mostrar.php">Mostrar</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-editar.php">Editar</a></p>
+<p><a href="http://localhost/ODAW/Ex10/ex10-excluir.php">Excluir</a></p>
 </html>
